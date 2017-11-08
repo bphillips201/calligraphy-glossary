@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './styles/App.css';
+import './App.css';
 import fire from './utils/fire';
 import Header from './components/header';
 
@@ -27,22 +27,21 @@ class App extends Component {
     return (
       <div className="App">
         <Header/>
-        <div className="term-list">
-          {glossary.map((letter) => (
-            <div key={letter.letter} className="letter-group">
-              <h3>{letter.letter}</h3>
+        <div className="wrapper">
+          <div className="term-list container">
+            {glossary.map((letter) => (
+              <div key={letter.letter} className="letter-group">
+                <h3>{letter.letter}</h3>
 
-              <ul className="letter-terms">
                 {letter.terms.map((t) => (
-                  <li key={t.term}>
-                    <h4>{t.term}</h4>
-                    <p>{t.definition}</p>
-                    {t.citation}
-                  </li>
+                  <div className="term" key={t.term}>
+                    <h4 className="term__label">{t.term}</h4>
+                    <p className="term__definition">{t.definition}</p>
+                  </div>
                 ))}
-              </ul>
-            </div>
-          ))}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     );
