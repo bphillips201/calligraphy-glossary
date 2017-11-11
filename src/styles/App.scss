@@ -1,7 +1,3 @@
-@import './styles/normalize';
-@import './styles/flexboxgrid';
-@import './styles/global';
-
-@import './styles/header';
-@import './styles/term';
-@import './styles/search';
+@import '.global/normalize';
+@import '.global/flexboxgrid';
+@import '.global/global';
