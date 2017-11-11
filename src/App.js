@@ -1,7 +1,9 @@
-import React, { Component } from 'react';
 import './styles/App.css';
-import fire from './utils/fire';
+import './styles/Letter.css';
+import './styles/Term.css';
+import React, { Component } from 'react';
 import Header from './components/Header';
+import fire from './utils/fire';
 
 class App extends Component {
   state = {
@@ -33,15 +35,17 @@ class App extends Component {
         <div className="wrapper">
           <div className="term-list container">
             {glossary.map((letter) => (
-              <div key={letter.letter} id={letter.letter} className="letter-group">
-                <h3>{letter.letter}</h3>
+              <div key={letter.letter} id={letter.letter} className="letter-group row">
+                <h3 className="col-xs-1">{letter.letter}</h3>
 
-                {letter.terms.map((t) => (
-                  <div className="term" key={t.term}>
-                    <h4 className="term__label">{t.term}</h4>
-                    <p className="term__definition">{t.definition}</p>
-                  </div>
-                ))}
+                <div className="col-xs-11">
+                  {letter.terms.map((t) => (
+                    <div className="term" key={t.term}>
+                      <h4 className="term__label">{t.term}</h4>
+                      <p className="term__definition">{t.definition}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>

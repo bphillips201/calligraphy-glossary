@@ -3,6 +3,16 @@
 
   li {
     display: inline-block;
+  }
+
+  a {
+    color: #4990E2;
+    text-decoration: none;
     padding: 8px;
+    display: inline-block;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

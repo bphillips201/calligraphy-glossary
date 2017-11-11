@@ -1,4 +1,5 @@
 .header {
+    margin-bottom: 52px;
     
     &__sub {
         background: #333;
@@ -40,12 +41,13 @@
 
     &__hero {
         text-align: center;
-        margin-top: px;
 
         h1 {
             font-family: 'Tangerine', Georgia, serif;
             font-size: 6.8rem;
             font-weight: 700;
+            margin-bottom: 0;
+            margin-bottom: 40px;
         }
     }
 }
