@@ -1113,6 +1113,48 @@ h1, h2, h3, h4, h5, h6 {
 p {
   line-height: 1.45; }
 
+.align-right {
+  text-align: right; }
+
+.align-center {
+  text-align: center; }
+
+.header__sub {
+  background: #333;
+  padding: 16px 32px;
+  color: white; }
+  .header__sub a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 200ms ease; }
+    .header__sub a:hover {
+      opacity: 0.7; }
+
+.header__author {
+  text-transform: uppercase;
+  letter-spacing: 2px; }
+
+.header__social a {
+  display: inline-block;
+  margin-left: 24px; }
+
+.header .social-cta {
+  text-indent: -9999px;
+  display: inline-block;
+  height: 0px;
+  width: 1px;
+  font-size: 1px;
+  color: transparent;
+  z-index: -20; }
+
+.header__hero {
+  text-align: center;
+  margin-top: px; }
+  .header__hero h1 {
+    font-family: 'Tangerine', Georgia, serif;
+    font-size: 6.8rem;
+    font-weight: 700; }
+
 .term {
   background: white;
   border: 1px solid #BCBCBC;
