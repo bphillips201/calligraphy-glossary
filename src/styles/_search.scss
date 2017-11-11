@@ -1,0 +1,17 @@
+.search {
+
+  input {
+    font-family: 'Amiri', Georgia, serif;
+    padding: 12px 20px 11px 20px;
+    width: 300px;
+    border-radius: 100px;
+    border: 1px solid #BCBCBC;
+    outline: none;
+    transition: border-color 200ms ease;
+
+    &:focus {
+      border-color: #333;
+    }
+  }
+
+}

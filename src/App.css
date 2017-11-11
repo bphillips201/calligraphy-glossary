@@ -1175,3 +1175,14 @@ p {
   .term__definition {
     margin-bottom: 0;
     margin-top: 0; }
+
+.search input {
+  font-family: 'Amiri', Georgia, serif;
+  padding: 12px 20px 11px 20px;
+  width: 300px;
+  border-radius: 100px;
+  border: 1px solid #BCBCBC;
+  outline: none;
+  transition: border-color 200ms ease; }
+  .search input:focus {
+    border-color: #333; }

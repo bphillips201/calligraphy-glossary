@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Search from './Search';
 
 class Header extends Component {
   render() {
@@ -16,6 +17,8 @@ class Header extends Component {
 
         <div className="header__hero wrapper">
           <h1>Calligraphy Glossary</h1>
+
+          <Search/>
         </div>
       </header>
     )

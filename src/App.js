@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import fire from './utils/fire';
-import Header from './components/header';
+import Header from './components/Header';
 
 class App extends Component {
   state = {
@@ -30,7 +30,7 @@ class App extends Component {
         <div className="wrapper">
           <div className="term-list container">
             {glossary.map((letter) => (
-              <div key={letter.letter} className="letter-group">
+              <div key={letter.letter} id={letter.letter} className="letter-group">
                 <h3>{letter.letter}</h3>
 
                 {letter.terms.map((t) => (
