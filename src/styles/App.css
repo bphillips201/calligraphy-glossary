@@ -1119,3 +1119,7 @@ p {
 
 .align-center {
   text-align: center; }
+
+.loading {
+  text-align: center;
+  font-size: 3.2rem; }

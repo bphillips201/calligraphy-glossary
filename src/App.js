@@ -24,7 +24,7 @@ class App extends Component {
   }
 
   render() {
-    const { glossary } = this.state;
+    const { glossary, isLoading } = this.state;
 
     return (
       <div className="App">
@@ -33,22 +33,28 @@ class App extends Component {
         />
 
         <div className="wrapper">
-          <div className="term-list container">
-            {glossary.map((letter) => (
-              <div key={letter.letter} id={letter.letter} className="letter-group row">
-                <h3 className="col-xs-1">{letter.letter}</h3>
 
-                <div className="col-xs-11">
-                  {letter.terms.map((t) => (
-                    <div className="term" key={t.term}>
-                      <h4 className="term__label">{t.term}</h4>
-                      <p className="term__definition">{t.definition}</p>
-                    </div>
-                  ))}
+        {isLoading
+          ? <div class="loading">
+              <i class="fa fa-circle-o-notch fa-spin" aria-hidden="true"></i>
+            </div>
+          : <div className="term-list container">
+              {glossary.map((letter) => (
+                <div key={letter.letter} id={letter.letter} className="letter-group row">
+                  <h3 className="col-xs-1">{letter.letter}</h3>
+
+                  <div className="col-xs-11">
+                    {letter.terms.map((t) => (
+                      <div className="term" key={t.term}>
+                        <h4 className="term__label">{t.term}</h4>
+                        <p className="term__definition">{t.definition}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+        }
         </div>
       </div>
     );
