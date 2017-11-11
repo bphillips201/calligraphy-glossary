@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './styles/App.css';
 import fire from './utils/fire';
 import Header from './components/Header';
 
@@ -26,7 +26,10 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Header/>
+        <Header
+          glossary={glossary}
+        />
+
         <div className="wrapper">
           <div className="term-list container">
             {glossary.map((letter) => (

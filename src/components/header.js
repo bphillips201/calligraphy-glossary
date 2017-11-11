@@ -1,5 +1,8 @@
+import '../styles/Header.css';
+
 import React, { Component } from 'react';
 import Search from './Search';
+import Filter from './Filter';
 
 class Header extends Component {
   render() {
@@ -19,6 +22,9 @@ class Header extends Component {
           <h1>Calligraphy Glossary</h1>
 
           <Search/>
+          <Filter
+            glossary={this.props.glossary}
+          />
         </div>
       </header>
     )
